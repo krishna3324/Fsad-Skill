@@ -1,0 +1,39 @@
+GIT QUICK REFERENCE COMMANDS
+============================
+
+INITIALIZATION & CONFIGURATION
+-------------------------------
+git init                          - Initialize a new Git repository
+git config user.name "Your Name"  - Configure username
+git config user.email "email"     - Configure email
+git config --list                 - Verify configuration
+
+FILE OPERATIONS
+---------------
+git status                        - Check repository status
+git add <filename>                - Add file to staging
+git add .                         - Add all files to staging
+git commit -m "message"           - Commit staged files
+
+BRANCH OPERATIONS
+-----------------
+git checkout -b <branch>          - Create and switch to new branch
+git checkout <branch>             - Switch to existing branch
+git branch                        - List all branches
+git branch -a                      - List all branches (including remote)
+git merge <branch>                - Merge branch into current branch
+
+VIEWING HISTORY
+---------------
+git log                           - Show commit history
+git log --oneline                 - Show compact commit history
+git log --graph --oneline         - Show visual branch history
+git diff                          - Show changes between commits
+
+REMOTE OPERATIONS (Not executed as per instructions)
+-----------------------------------------------------
+git remote add origin <url>       - Connect to remote repository
+git push -u origin <branch>       - Push to remote
+git pull origin <branch>          - Pull from remote
+git clone <url>                   - Clone remote repository
+

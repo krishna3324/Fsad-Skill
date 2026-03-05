@@ -1,0 +1,10 @@
+Git Version Control Notes
+========================
+- Initialize with: git init
+- Check status: git status
+- Add to staging: git add filename
+- Commit: git commit -m "message"
+- Create branch: git checkout -b branchname
+- Switch branch: git checkout branchname
+- Merge branch: git merge branchname
+
