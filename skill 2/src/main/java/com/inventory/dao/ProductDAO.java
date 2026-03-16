@@ -6,17 +6,10 @@ import org.hibernate.Transaction;
 import com.inventory.entity.Product;
 import com.inventory.util.HibernateUtil;
 
-/**
- * ProductDAO class
- * This class provides CRUD operations for the Product entity.
- * It handles database operations using Hibernate sessions.
- */
+
 public class ProductDAO {
     
-    /**
-     * Save a new product to the database
-     * @param product - Product object to be saved
-     */
+    
     public void saveProduct(Product product) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
@@ -26,11 +19,7 @@ public class ProductDAO {
         System.out.println("Product saved successfully: " + product.getName());
     }
     
-    /**
-     * Retrieve a product by its ID
-     * @param id - Product ID
-     * @return Product object if found, null otherwise
-     */
+    
     public Product getProduct(int id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Product product = session.get(Product.class, id);
@@ -38,12 +27,7 @@ public class ProductDAO {
         return product;
     }
     
-    /**
-     * Update price and quantity of a product
-     * @param id - Product ID to update
-     * @param price - New price
-     * @param quantity - New quantity
-     */
+    
     public void updateProduct(int id, double price, int quantity) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
@@ -60,10 +44,7 @@ public class ProductDAO {
         session.close();
     }
     
-    /**
-     * Delete a product by its ID
-     * @param id - Product ID to delete
-     */
+    
     public void deleteProduct(int id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
@@ -78,10 +59,7 @@ public class ProductDAO {
         session.close();
     }
     
-    /**
-     * Retrieve all products
-     * @return List of all products
-     */
+    
     @SuppressWarnings("unchecked")
     public java.util.List<Product> getAllProducts() {
         Session session = HibernateUtil.getSessionFactory().openSession();

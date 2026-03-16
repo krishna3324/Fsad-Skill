@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class Student {
 
     private int id = 10;
-    private String name = "Divya";
-    private String gender = "Female";
+    private String name = "Krishna";
+    private String gender = "Male";
 
     @Autowired
     private Course course;
